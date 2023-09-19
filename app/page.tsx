@@ -15,7 +15,7 @@ export default function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
-    
+    <>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
@@ -36,7 +36,9 @@ export default function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-
+<h1 className="text-2xl underline">Home</h1>
+    <Button> Click Me!</Button>
+    </>
      
   )
 }
