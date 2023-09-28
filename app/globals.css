@@ -227,6 +227,20 @@
   background-clip: text;
   text-fill-color: transparent;
 }
+.text-gradient_blue-yellow{
+  background: -webkit-linear-gradient(to right, #0699CF 49%, #CFC648 49%);
+  background: -moz-linear-gradient(to right, #0699CF 49%, #CFC648 49%);
+  background: linear-gradient(to right, #0699CF 49%, #CFC648 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient_blue-yellow1{
+  background: -webkit-linear-gradient(to left, #FFFF00 0%, #05C1FF 35%, #FFFF00 100%);
+background: -moz-linear-gradient(to left, #FFFF00 0%, #05C1FF 35%, #FFFF00 100%);
+background: linear-gradient(to left, #FFFF00 0%, #05C1FF 35%, #FFFF00 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
