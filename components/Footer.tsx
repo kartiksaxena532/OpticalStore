@@ -2,7 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer >
+      <p>
+        Copyright © 2023 Deepak Opticals | All Rights Reserved  
+      </p>
+    </footer>
   )
 }
 
