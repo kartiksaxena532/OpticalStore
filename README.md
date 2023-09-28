@@ -1,6 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+
+## Optical Store NextJs App
+![Screenshot (310)](https://github.com/kartiksaxena532/OpticalStore/assets/92146206/7a6cd0d5-07a6-4b9f-94db-40d623e7a050)
+
+
 
 First, run the development server:
 
