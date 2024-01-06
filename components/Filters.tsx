@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 const links = ['all', 'Spectacles', 'Sunglasses', 'Contact Lens', 'Branded']
 
 const Filters = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('0');
   const searchParms = useSearchParams();
   const router = useRouter();
 
@@ -43,8 +43,7 @@ const Filters = () => {
           className={`${
             active === link ?"gradient_blue-purple" : ""
           } whitespace-nwrap rounded-lg px-6 py-2.5 capitalize`}
-        >
-          {link}
+        >{link}
         </button>
       ))}
     </ul>
