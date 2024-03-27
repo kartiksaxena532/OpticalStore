@@ -23,6 +23,9 @@ const Page = async ({ searchParams }: Props) => {
 
   return (
     <main className='flex-center paddings mx-auto w-full max-screen-2xl flex-col'>
+      <div>
+        
+      </div>
 <section className='m-16 w-full'>
   <div className='flex-center relative min-h-[375px] w-full flex-col rounded-xl bg-banner
   bg-center bg-cover text-center'>

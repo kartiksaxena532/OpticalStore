@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
+import { UserButton } from "@clerk/nextjs";
 const Navbar = () => {
   return (
     <nav className='flex-center fixed top-0 z-50 w-full border-b-2 border-black-200 py-7 text-white'>
    <div className='flex-between max-w-screen-2xl w-full mx-auto px-6 xs:px-8 sm:px-16  '>
     
-<Link href="/">
+
 <div className='flex-center'>
   <Image src='/deeepak.jpg' 
   width={55}
@@ -14,7 +14,7 @@ const Navbar = () => {
   alt='Deepak Optical Logo'/>
   <p  className='px-2 font-semibold text-gradient_blue-yellow text-2xl '> Deepak Opticals</p>
   </div>
-</Link>
+
 
 <Image src='/hamburger-menu.svg' 
 className='block sm:hidden'
@@ -35,7 +35,11 @@ Leave A Review
 </Link>
 
 </li>
-
+<li>
+<div >
+      <UserButton />
+    </div>
+</li>
 
 </ul>
 </div>
