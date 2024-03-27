@@ -4,7 +4,7 @@ import Filters from '@/components/Filters'
 import ResourceCard from '@/components/ResourceCard'
 import { getResources, getResourcesPlaylist } from '@/sanity/actions'
 import Header from '@/components/Header';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const revalidate = 900;
 
 interface Props {
@@ -33,6 +33,7 @@ const Page = async ({ searchParams }: Props) => {
 <h1 className='sm:headings1 text-6xl font-bold mb-6 text-center text-white'>The Widest Range Of Spectacles😎 </h1>
 
   </div>
+  <SpeedInsights/>
 <SearchForm/>
 
 <Filters/>
