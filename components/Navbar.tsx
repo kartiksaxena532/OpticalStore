@@ -24,14 +24,14 @@ alt='hamburger'/>
 <ul className='flex-center gap-x-3 max-md:hidden md:gap-x-10'>
 <li className='body-text text-gradient_blue-yellow1 !font-bold'>
 <Link href="https://drive.google.com/uc?export=download&id=1VbJmRL8y0ooBEbG_kRnE7u2zbP4_5nHn" target='blank'>
-Visit Us!
+  Buisness Card📩
 </Link>
 
 </li>
 
 <li className='body-text !font-normal'>
 <Link href="https://www.google.com/search?client=opera&q=deepak+optical+aligarh&sourceid=opera&ie=UTF-8&oe=UTF-8#" target='blank'>
-Leave A Review
+Visit Us!
 </Link>
 
 </li>
