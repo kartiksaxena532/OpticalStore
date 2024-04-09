@@ -23,7 +23,7 @@ height={30}
 alt='hamburger'/>
 <ul className='flex-center gap-x-3 max-md:hidden md:gap-x-10'>
 <li className='body-text text-gradient_blue-yellow1 !font-bold'>
-<Link href="https://maps.app.goo.gl/nMwT3XG6ZZGwi5iv6" target='blank'>
+<Link href="https://drive.google.com/uc?export=download&id=1VbJmRL8y0ooBEbG_kRnE7u2zbP4_5nHn" target='blank'>
 Visit Us!
 </Link>
 
