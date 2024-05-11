@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
 
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/new/input"
 import { formUrlQuery } from '@/sanity/utils';
 
 const SearchForm = () => {
