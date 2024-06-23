@@ -7,11 +7,10 @@ const Footer = () => {
         Copyright © 2023 Deepak Opticals😎 | All Rights Reserved ✅ 
       </p> 
       <div className='flex gap-x-9'>
-        <Link href="/"> Terms & Conditions      
+        <Link href="/terms"> Terms & Conditions      
         </Link>
-        <Link href="/"> Privacy Policy      
+        <Link href="/privacy"> Privacy Policy      
         </Link>
-
       </div>
     </footer>
   )

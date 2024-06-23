@@ -1,8 +1,8 @@
 "use client"
 
 import { formUrlQuery } from '@/sanity/utils';
-import { useState } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useState } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 const links = ['all', 'Spectacles', 'Sunglasses', 'Contact Lens', 'Branded']
 
