@@ -1,10 +1,10 @@
-
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/new/card';
-
+import { BackgroundGradient } from "@/components/background-gradient";
 interface Props {
   id: string;
   title: string;
@@ -15,19 +15,20 @@ interface Props {
 
 const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props) => {
   return (
+    <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900">
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
       <Link href={downloadLink} target="_blank">
         <CardHeader className="flex-center flex-col gap-2.5 !p-0">
           <div className="h-fit w-full">
             <Image 
               src={image}
-              className="h-full rounded-md object-cover"
+              className="h-full rounded-md object-fill"
               width={384}
               height={440}
               alt={title}
             />
           </div>
-          <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">{title}</CardTitle>
+          <CardTitle className="text-white paragraph-semibold w-full text-left">{title}</CardTitle>
         </CardHeader>
       </Link>
       <CardContent className="flex-between mt-4 p-0">
@@ -43,6 +44,7 @@ const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props)
         </Link>
       </CardContent>
     </Card>
+    </BackgroundGradient>
   )
 }
 
