@@ -4,7 +4,9 @@ import Filters from '@/components/Filters'
 import ResourceCard from '@/components/ResourceCard'
 import { getResources, getResourcesPlaylist } from '@/sanity/actions'
 import Header from '@/components/Header';
-
+import { ContainerScroll } from "@/components/conatiner-scroll";
+import Image from "next/image";
+import banner from "@/public/banner.jpeg";
 export const revalidate = 900;
 
 interface Props {
@@ -23,22 +25,35 @@ const Page = async ({ searchParams }: Props) => {
 
   return (
     <main className='flex-center paddings mx-auto w-full max-screen-2xl flex-col'>
-<section className='m-16 w-full'>
-  <div className='flex-center relative min-h-[375px] w-full flex-col rounded-xl bg-banner
-  bg-center bg-cover text-center'>
-
-<h1 className='sm:headings1 text-6xl font-bold mb-6 text-center text-white'>The Widest Range Of Spectacles😎 </h1>
-
+<div className=" -mt-16 flex flex-col overflow-hidden">
+    <ContainerScroll
+      titleComponent={
+        <>
+          <h1 className="text-4xl md:text-7xl font-semibold text-white animate-bounce">
+          The Widest Range Of <br />
+            <span className="text-7xl md:text-9xl font-bold mt-1 leading-none">
+            Eyewears😎 
+            </span>
+          </h1>
+        </>
+      }
+    >
+      <Image
+        src={banner}
+        alt="hero"
+        height={720}
+        width={1400}
+        className="mx-auto rounded-2xl object-cover h-full object-left-top"
+        draggable={false}
+      />
+    </ContainerScroll>
   </div>
 <SearchForm/>
 
 <Filters/>
 
-
-</section>
-
 {(searchParams?.query || searchParams?.category) && (
-        <section className="flex-center mt-6 w-full flex-col sm:mt-20">
+        <section className="flex-center mt-6 w-full flex-col sm:mt-5">
           <Header
             query={searchParams?.query || ''}
             category={searchParams?.category || ''}
