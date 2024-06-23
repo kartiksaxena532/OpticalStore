@@ -37,7 +37,7 @@ const Page = async ({ searchParams }: Props) => {
           <h1 className="text-3xl md:text-7xl font-semibold text-white animate-bounce">
           The Widest Range Of <br />
             <span className="text-5xl md:text-9xl font-bold mt-1 leading-none">
-            Eyewears😎 
+            Eyewears😎
             </span>
           </h1>
         </>
