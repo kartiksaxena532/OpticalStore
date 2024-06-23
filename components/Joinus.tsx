@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import { TypewriterEffectSmooth } from "./new/typewriter";
 export default function Typewriter() {
   const words = [
@@ -25,22 +26,23 @@ export default function Typewriter() {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center h-[30rem]  ">
+    <div className="flex flex-col items-center justify-center h-[35rem]  ">
       <p className="text-neutral-200 md:text-4xl  ">
         Enter The World of EyeCare
       </p>
       <TypewriterEffectSmooth words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <Link href="">
-        <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-black border border-white border-transparent text-white text-sm md:text-lg">
-          Join now
+      <div className="flex flex-row md:pt-10 gap-5 md:space-y-0 space-x-0 md:space-x-4">
+      
+        <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-none border border-white border-transparent text-white text-sm md:text-lg">
+        <LoginLink>
+          Login
+          </LoginLink>
         </button>
-        </Link>
-        <Link href="">
-        <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-white text-black border border-black text-sm md:text-lg">
-          Signup
+        <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-blue-500 text-white border border-black text-sm md:text-lg">
+
+         <RegisterLink>Sign up</RegisterLink>
         </button>
-        </Link>
+      
       </div>
     </div>
   );
