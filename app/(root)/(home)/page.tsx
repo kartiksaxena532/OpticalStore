@@ -9,11 +9,13 @@ import { ContainerScroll } from "@/components/conatiner-scroll";
 import Image from "next/image";
 import Typewriter from '@/components/Joinus'
 import banner from "@/public/banner.jpeg";
+import Bento from "@/components/Bento"
 
 function Page(){
   return (
     <main className='flex-center paddings mx-auto w-full max-screen-2xl flex-col'>
       <Typewriter/>
+      <Bento/>
     </main>
   )
 }
