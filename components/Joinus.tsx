@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import { TypewriterEffectSmooth } from "./new/typewriter";
+
 export default function Typewriter() {
   const words = [
     {
@@ -31,6 +32,10 @@ export default function Typewriter() {
         Enter The World of EyeCare
       </p>
       <TypewriterEffectSmooth words={words} />
+
+      <div className="w-full h-fit rounded-lg bg-none">
+        
+        </div>
       <div className="flex flex-row md:pt-10 gap-5 md:space-y-0 space-x-0 md:space-x-4">
       
         <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-none border border-white border-transparent text-white text-sm md:text-lg">
