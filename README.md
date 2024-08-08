@@ -1,6 +1,6 @@
 
 
-## Optical Store NextJs App
+## Optical Store NextJs App with appointment based system
 ![Screenshot (310)](https://github.com/kartiksaxena532/OpticalStore/assets/92146206/7a6cd0d5-07a6-4b9f-94db-40d623e7a050)
 
 
