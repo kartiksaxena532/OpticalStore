@@ -1,3 +1,5 @@
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -14,9 +16,9 @@ export default function RootLayout({ children }: {
       <html lang="en" >
         <head />
         <body className='min-h-screen bg-black-100 font-poppins'>
-          
+          <Navbar/>
             {children}
-        
+        <Footer/>
         </body>
       </html>
   )
