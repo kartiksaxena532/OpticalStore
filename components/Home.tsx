@@ -1,22 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
+import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="bg-transparent">
-      <div className="isolate w-full">
+      <div className="isolate relative w-full">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -29,32 +23,32 @@ export default function Home() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-96 max-w-4xl py-32">
+        <div className="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:py-22 md:py-32 lg:py-40 text-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className=" relative rounded-full px-3 py-1 text-sm/6 text-blue-200 ring-1 ring-gray-500 hover:ring-gray-500">
-              Announcing our next additon to services.{' '}
+            <div className="relative rounded-full px-3 py-1 text-sm text-blue-200 ring-1 ring-gray-500 hover:ring-gray-500">
+              Announcing our next addition to services.{' '}
               <a href="#" className="font-semibold text-blue-400">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Explore Here<span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
-          <div className="text-center w-full ">
-            <h1 className="text-balance text-5xl font-semibold tracking-loose  text-gray-400 sm:text-7xl">
+          <div className="text-center w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold tracking-loose text-gray-400">
                 Enrich Your Viewing Experience
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium  capitalize text-gray-500 sm:text-xl/8">
-              Helping in improving vision and eyecare at its best with blazing fast services and core staff to help in
+            <p className="mt-6 text-md sm:text-lg md:text-xl lg:text-2xl font-medium capitalize text-gray-500">
+              Helping in improving vision and eyecare at its best with blazing fast services and core staff to assist in
               various needs.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-3xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-gray-900">
+              <a href="#" className="text-sm font-semibold text-gray-200">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
