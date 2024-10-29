@@ -10,18 +10,12 @@ import Image from "next/image";
 import Typewriter from '@/components/Joinus'
 import banner from "@/public/banner.jpeg";
 import Bento from "@/components/Bento"
-import Spline from '@splinetool/react-spline/next';
 
 function Page(){
   return (
-    <main className='flex-center paddings mx-auto w-full max-screen-2xl flex-col'>
+    <main className='flex-center paddings w-full max-screen-2xl flex-col'>
       <Typewriter/>
-      <div className='rounded-md mb-10 hiddedn md:visible'>
-      <Spline scene="https://prod.spline.design/KFonZGtsoUXP-qx7/scene.splinecode" />
-      </div>
-      <Bento/>
     </main>
-    
   )
 }
 

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import { TypewriterEffectSmooth } from "./new/typewriter";
 
 export default function Typewriter() {
@@ -37,16 +36,11 @@ export default function Typewriter() {
         
         </div>
       <div className="flex flex-row md:pt-10 gap-5 md:space-y-0 space-x-0 md:space-x-4">
-      
+      <Link href='/dashboard'>
         <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-none border border-white border-transparent text-white text-sm md:text-lg">
-        <LoginLink>
-          Login
-          </LoginLink>
+       Get Started
         </button>
-        <button className="md:w-60 md:h-16 w-40 h-14 rounded-xl bg-blue-500 text-white border border-black text-sm md:text-lg">
-
-         <RegisterLink>Sign up</RegisterLink>
-        </button>
+        </Link>
       
       </div>
     </div>

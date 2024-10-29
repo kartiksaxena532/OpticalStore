@@ -34,12 +34,12 @@ const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props)
       <CardContent className="flex-between mt-4 p-0">
         <div className="flex-center body-medium gap-1.5 text-white">
           <Image 
-            src="/downloads.svg" width={20} height={20} alt="download"
+            src="/graph-up-svgrepo-com.svg" width={20} height={20} alt="download" className="white"
           />
           {downloadNumber}
         </div>
         <Link href={downloadLink} target="_blank" className="flex-center text-gradient_purple-blue body-semibold gap-1.5">
-          Download Now
+          Buy Now
           <Image src="/arrow-blue.svg" width={13} height={10} alt="arrow" />
         </Link>
       </CardContent>
