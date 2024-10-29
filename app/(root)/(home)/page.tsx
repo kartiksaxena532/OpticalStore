@@ -1,20 +1,11 @@
 
 import React from 'react'
-import SearchForm from '@/components/SearchForm'
-import Filters from '@/components/Filters'
-import ResourceCard from '@/components/ResourceCard'
-import { getResources, getResourcesPlaylist } from '@/sanity/actions'
-import Header from '@/components/Header';
-import { ContainerScroll } from "@/components/conatiner-scroll";
-import Image from "next/image";
-import Typewriter from '@/components/Joinus'
-import banner from "@/public/banner.jpeg";
-import Bento from "@/components/Bento"
+import Home  from "@/components/Home"
 
 function Page(){
   return (
-    <main className='flex-center paddings w-full max-screen-2xl flex-col'>
-      <Typewriter/>
+    <main className='justify-center items-center flex  paddings w-full max-screen-2xl '>
+      <Home/>
     </main>
   )
 }
