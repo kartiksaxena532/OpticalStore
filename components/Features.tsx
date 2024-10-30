@@ -4,37 +4,37 @@ const features = [
   {
     name: 'Push to deploy',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.',
     icon: CloudArrowUpIcon,
   },
   {
     name: 'SSL certificates',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.',
     icon: LockClosedIcon,
   },
   {
     name: 'Simple queues',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. ',
     icon: ArrowPathIcon,
   },
   {
     name: 'Advanced security',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis.',
     icon: FingerPrintIcon,
   },
 ]
 
-export default function Example() {
+export default function Features() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-transparent h-[100vh] my-16 absolute top-0 left-0 w-full flex justify-center items-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
-          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            Everything you need to deploy your app
+        <div className="mx-auto max-w-2xl lg:text-center hover:scale-110 duration-150">
+          <h2 className="text-base/7 font-semibold text-indigo-600">Get your Eyes on the Future</h2>
+          <p className="mt-2 text-pretty text-4xl font-semibold capitalize tracking-tight text-white  sm:text-5xl lg:text-balance">
+            Everything You Need for a comfortable Vision
           </p>
           <p className="mt-6 text-lg/8 text-gray-600">
             Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum

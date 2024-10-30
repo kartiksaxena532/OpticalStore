@@ -1,3 +1,4 @@
+import Features from '@/components/Features'
 import React from 'react'
 
 const page = () => {
@@ -19,8 +20,7 @@ const page = () => {
         </div>
         </div>
 
-        <div className='relative text-white text-4xl font-bold mt-32'>Page Services</div>
-
+    <Features />
         </div>
     </div>
   )

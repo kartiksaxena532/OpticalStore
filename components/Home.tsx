@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:py-22 md:py-32 lg:py-40 text-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm text-blue-200 ring-1 ring-gray-500 hover:ring-gray-500">
+            <div className="relative rounded-full px-3 py-1 text-sm text-blue-200 ring-1 ring-gray-500 hover:ring-gray-500 hover:text-xl duration-150">
               Announcing our next addition to services.{' '}
               <a href="#" className="font-semibold text-blue-400">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -35,20 +35,20 @@ export default function Home() {
           </div>
           <div className="text-center w-full">
             <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold tracking-loose text-gray-400">
-                Enrich Your Viewing Experience
+                Enrich 😎Your Viewing  Experience🔍
             </h1>
             <p className="mt-6 text-md sm:text-lg md:text-xl lg:text-2xl font-medium capitalize text-gray-500">
-              Helping in improving vision and eyecare at its best with blazing fast services and core staff to assist in
+              Helping in improving vision 👓 and eyecare at its best with blazing ⚡fast services and core staff 🤵to assist in
               various needs.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="#"
-                className="rounded-3xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-3xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 hover:text-xl duration-150 hover:rounded-full"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold text-gray-200">
+              <a href="#" className="text-sm font-semibold text-gray-200 hover:text-xl duration-150">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

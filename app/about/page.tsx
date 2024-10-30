@@ -1,3 +1,4 @@
+import AboutUs from '@/components/AboutUs'
 import React from 'react'
 
 const page = () => {
@@ -17,7 +18,9 @@ const page = () => {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] translate-y-1/6 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-<div className='relative text-white text-4xl font-bold mt-32'>Page About</div>
+<div className='relative text-white text-4xl font-bold mt-32'>
+  <AboutUs />
+</div>
 
         </div>
         </div>
