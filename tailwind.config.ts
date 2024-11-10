@@ -78,7 +78,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors, addVariablesForColors,],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/forms'), addVariablesForColors, addVariablesForColors],
+
 }
 
 function addVariablesForColors({ addBase, theme }: any) {

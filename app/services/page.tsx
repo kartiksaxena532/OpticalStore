@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='w-full h-[100vh]'>
+    <div className='w-full h-[200dvh]'>
            <div className="bg-transparent">
       <div className="isolate relative w-full">
         <div

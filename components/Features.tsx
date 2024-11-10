@@ -29,7 +29,7 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-transparent h-[100vh] my-16 absolute top-0 left-0 w-full flex justify-center items-center">
+    <div className="bg-transparent h-[100vh] my-24 absolute top-0 left-0 w-full flex justify-center items-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center hover:scale-110 duration-150">
           <h2 className="text-base/7 font-semibold text-indigo-600">Get your Eyes on the Future</h2>

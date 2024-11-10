@@ -1,11 +1,11 @@
 
-export default function Example() {
+export default function Product() {
     return (
-      <div className="bg-gray-50 py-24 sm:py-32">
+      <div className="bg-transparent py-24 sm:py-32">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
-          <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-            Everything you need to deploy your app
+          <h2 className="text-center text-base/7 font-semibold text-indigo-600">Get faster</h2>
+          <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-50 sm:text-5xl">
+            Everything you need get glasses faster
           </p>
           <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2">
@@ -13,7 +13,7 @@ export default function Example() {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Mobile friendly
+                    Choose Frame
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
@@ -35,7 +35,7 @@ export default function Example() {
               <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Choose Glasses</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
                   </p>
@@ -54,7 +54,7 @@ export default function Example() {
               <div className="absolute inset-px rounded-lg bg-white"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Add Address</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                     Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
                   </p>
@@ -74,7 +74,7 @@ export default function Example() {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Powerful APIs
+                    Wait for Delivery
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                     Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
@@ -85,9 +85,9 @@ export default function Example() {
                     <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                       <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                         <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                          NotificationSetting.jsx
+                          Tracking
                         </div>
-                        <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                        <div className="border-r border-gray-600/10 px-4 py-2">Orders</div>
                       </div>
                     </div>
                     <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
