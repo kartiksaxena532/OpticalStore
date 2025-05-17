@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 const links = ['all', 'Spectacles', 'Sunglasses', 'Contact Lens', 'Branded']
 
 const Filters = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('all');
   const searchParms = useSearchParams();
   const router = useRouter();
 

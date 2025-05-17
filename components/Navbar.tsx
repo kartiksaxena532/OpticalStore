@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link href="/services">Services</Link>
           </button>
           <button className='body-text hover:underline underline-offset-4 cursor-pointer !font-normal'>
-            <Link href="/about">About Us</Link>
+            <Link href="/about">Contact Us</Link>
           </button>
         </div>
 
