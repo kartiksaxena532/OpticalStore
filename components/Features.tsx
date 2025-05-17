@@ -1,62 +1,67 @@
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-
-const features = [
-  {
-    name: 'Push to deploy',
-    description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates',
-    description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Simple queues',
-    description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. ',
-    icon: ArrowPathIcon,
-  },
-  {
-    name: 'Advanced security',
-    description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis.',
-    icon: FingerPrintIcon,
-  },
-]
+import { FaCar, FaEye, FaMobileAlt, FaSun } from "react-icons/fa";
 
 export default function Features() {
   return (
-    <div className="bg-transparent h-[100vh] my-24 absolute top-0 left-0 w-full flex justify-center items-center">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center hover:scale-110 duration-150">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Get your Eyes on the Future</h2>
-          <p className="mt-2 text-pretty text-4xl font-semibold capitalize tracking-tight text-white  sm:text-5xl lg:text-balance">
-            Everything You Need for a comfortable Vision
-          </p>
-          <p className="mt-6 text-lg/8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
-          </p>
+   
+   <section id="lenses" className="pt-28 pb-10 px-4 sm:px-6 lg:px-8 bg-black-100">
+    <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white-800 mb-4">Advanced Lens Technology</h2>
+            <p className="text-xl text-white max-w-3xl mx-auto">Crystal clear vision with our premium lens options tailored to your needs.</p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
-                <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon aria-hidden="true" className="h-6 w-6 text-white" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base/7 text-gray-600">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+                <div className="grid grid-cols-2 gap-6">
+                    {/* Lens 1 */}
+                    <div className="product-card bg-white rounded-xl p-6 shadow-lg">
+                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <FaEye className="fas fa-eye text-blue-600 text-2xl"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">Anti-Reflective</h3>
+                        <p className="text-gray-600 text-center">Reduce glare and eye strain for clearer vision</p>
+                    </div>
+
+                    <div className="product-card bg-white rounded-xl p-6 shadow-lg">
+                        <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <FaSun className="fas fa-sun text-indigo-600 text-2xl"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">Photochromic</h3>
+                        <p className="text-gray-600 text-center">Automatically adjust to changing light conditions</p>
+                    </div>
+
+                    <div className="product-card bg-white rounded-xl p-6 shadow-lg">
+                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <FaMobileAlt className="fas fa-mobile-alt text-green-600 text-2xl"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">Blue Light</h3>
+                        <p className="text-gray-600 text-center">Protect your eyes from digital screen strain</p>
+                    </div>
+
+                    <div className="product-card bg-white rounded-xl p-6 shadow-lg">
+                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <FaCar className="text-purple-600 text-2xl"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">Polarized</h3>
+                        <p className="text-gray-600 text-center">Eliminate harsh glare for safer driving</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="order-1 md:order-2 relative">
+                <img 
+                    src="https://plus.unsplash.com/premium_photo-1677333502598-c7023d305395?blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&h=630&mark=https:%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEzMzM1ODkyfA&ixlib=rb-4.0.3" 
+                    alt="Lens Technology" 
+                    className="w-[680vw] h-[50vh] mx-auto rounded-lg shadow-xl animate-spring" 
+                />
+                <div className="absolute -bottom-20 left-8 w-24 h-24 bg-indigo-200 rounded-full opacity-20 animate-bounce"></div>
+                 <div className="absolute   -top-20 right-8 w-24 h-24 bg-indigo-200 rounded-full opacity-20 animate-bounce"></div>
+            </div>
+
         </div>
-      </div>
     </div>
+</section>
+
   )
 }

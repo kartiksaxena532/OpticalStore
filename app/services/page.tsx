@@ -3,12 +3,12 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='w-full h-[200dvh]'>
+    <div className='w-full '>
            <div className="bg-transparent">
       <div className="isolate relative w-full">
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          className="absolute inset-x-0 mt-40 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         >
           <div
             style={{
@@ -19,7 +19,6 @@ const page = () => {
           />
         </div>
         </div>
-
     <Features />
         </div>
     </div>

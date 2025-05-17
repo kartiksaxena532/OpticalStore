@@ -23,7 +23,7 @@ export default function Home() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:py-22 md:py-32 lg:py-40 text-center">
+        <div className="mx-auto max-w-6xl px-4 pt-32 pb-24 sm:py-22 md:py-32 lg:py-40 text-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm text-blue-200 ring-1 ring-gray-500 hover:ring-gray-500 hover:text-xl duration-150">
               Announcing our next addition to services.{' '}
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold tracking-loose text-gray-400">
+            <h1 className="text-5xl w-full sm:text-5xl md:text-5xl lg:text-[6vw] font-semibold tracking-loose text-gray-400">
                 Enrich 😎Your Viewing  Experience🔍
             </h1>
             <p className="mt-6 text-md sm:text-lg md:text-xl lg:text-2xl font-medium capitalize text-gray-500">

@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='flex-center fixed top-0 z-50 w-full border-b-2 border-gray-600 py-7 backdrop-blur-sm text-white bg'>
+    <nav className='flex-center fixed top-0 z-50 w-full  py-4 backdrop-blur-sm text-white bg'>
       <div className='flex-between max-w-screen-3xl w-full mx-auto px-6 xs:px-8 sm:px-16'>
         
         <Link href="/">

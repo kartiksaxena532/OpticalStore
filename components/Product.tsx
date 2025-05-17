@@ -3,8 +3,8 @@ export default function Product() {
     return (
       <div className="bg-transparent py-24 sm:py-32">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-center text-base/7 font-semibold text-indigo-600">Get faster</h2>
-          <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-50 sm:text-5xl">
+          <h2 className="text-center text-2xl font-semibold text-yellow-600">Deliver faster, See Better</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-balance text-center text-3xl font-semibold tracking-tight text-gray-50 sm:text-6xl">
             Everything you need get glasses faster
           </p>
           <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">

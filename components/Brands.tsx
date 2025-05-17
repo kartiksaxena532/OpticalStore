@@ -22,24 +22,24 @@ export default function Brands() {
             />
             <img
               alt="Tuple"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2021%2F06%2FRay-Ban-logo.png&f=1&nofb=1&ipt=0c0099eb77bf64aec9664ee7b17a63bc3b5acb3885661ba1b3fd2a95a4d31136&ipo=images"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 invert hover:scale-110 duration-150"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lunettes-createurs.com%2Fwp-content%2Fuploads%2F2024%2F01%2Flogo-essilor-luxottica.png&f=1&nofb=1&ipt=307cb160a85890f4c14f7cf7451f7644a1a028becc2c2d084ba4f21c008d47b5"
+              width={188}
+              height={58}
+              className="col-span-2 h-20 w-full object-contain lg:col-span-1 invert hover:scale-110 duration-150"
             />
             <img
               alt="SavvyCal"
-              src="https://seeklogo.com/images/T/titan-eyewear-logo-98FF5F4184-seeklogo.com.png"
+              src="https://techstory.in/wp-content/uploads/2015/11/Titan-Company-Logo.jpg"
               width={158}
               height={48}
-              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1 invert hover:scale-110 duration-150"
+              className="col-span-2 h-20 w-full object-contain sm:col-start-2 lg:col-span-1 hover:scale-110 duration-150"
             />
             <img
               alt="Statamic"
               src="https://freepngdesign.com/content/uploads/images/p19-19-fastrack-1461198656.png"
               width={200}
               height={100}
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 invert hover:scale-110 duration-150"
+              className="col-span-2 col-start-2 h-20 w-full object-contain sm:col-start-auto lg:col-span-1 invert hover:scale-110 duration-150"
             />
           </div>
         </div>
