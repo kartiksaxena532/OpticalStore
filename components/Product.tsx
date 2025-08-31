@@ -1,3 +1,8 @@
+import Image from 'next/image';
+import person from '../public/person.png';
+import lenses from '../public/lenses.png';
+import address from '../public/address.png';
+import dash from '../public/dash.png';
 
 export default function Product() {
     return (
@@ -15,16 +20,17 @@ export default function Product() {
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                     Choose Frame
                   </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Get your perfect fit from our wide range of styles.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                   <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img
-                      className="size-full object-cover object-top"
-                      src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
-                      alt=""
+                    <Image
+                      className="size-full object-cover"
+                      src={person}
+                      height={500}
+                      width={500}
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -37,13 +43,13 @@ export default function Product() {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Choose Glasses</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                    Explore our collection of high-quality lenses for clear vision.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                  <img
-                    className="w-full max-lg:max-w-xs"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                  <Image
+                    className="h-[min(152px,40cqw)] object-cover object-center rounded-2xl"
+                    src={lenses}
                     alt=""
                   />
                 </div>
@@ -56,13 +62,13 @@ export default function Product() {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Add Address</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                    Provide your delivery details for a seamless experience.
                   </p>
                 </div>
-                <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-                  <img
-                    className="h-[min(152px,40cqw)] object-cover object-center"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+                <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                  <Image
+                    className="h-[min(152px,40cqw)] object-cover object-center rounded-2xl"
+                    src={address}
                     alt=""
                   />
                 </div>
@@ -77,7 +83,7 @@ export default function Product() {
                     Wait for Delivery
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                    Sit back and relax while we deliver your glasses to your doorstep.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow">
@@ -90,7 +96,15 @@ export default function Product() {
                         <div className="border-r border-gray-600/10 px-4 py-2">Orders</div>
                       </div>
                     </div>
-                    <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
+                    <div className="h-full w-full object-cover object-left">
+                       <Image
+                    className="h-full object-cover object-left"
+                    height={4000}
+                    width={6000}
+                    src={dash}
+                    alt=""
+                  />
+                    </div>
                   </div>
                 </div>
               </div>
