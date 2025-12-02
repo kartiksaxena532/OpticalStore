@@ -14,11 +14,28 @@ export default function RootLayout({ children }: {
   return (
   
       <html lang="en" >
-        <head />
+         <head>
+        {/* Google Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y68ZH8FPX7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Y68ZH8FPX7', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
+
         <body className='min-h-screen bg-black-100 font-poppins'>
           <Navbar/>
             {children}
         <Footer/>
+        
         </body>
       </html>
   )
