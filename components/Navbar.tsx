@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </button>
           <button className='body-text hover:underline underline-offset-4 cursor-pointer !font-normal'>
-            <Link href="/dashboard">Add Customer</Link>
+            <Link href="/buynow">Buy Now</Link>
           </button>
           <button className='body-text hover:underline underline-offset-4 cursor-pointer !font-normal'>
             <Link href="/services">Services</Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
               <Link href="/" className="body-text hover:text-3xl" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
-              <Link href="/dashboard" className="body-text hover:text-3xl" onClick={() => setIsOpen(false)}>
+              <Link href="/buynow" className="body-text hover:text-3xl" onClick={() => setIsOpen(false)}>
                 Buy Now
               </Link>
               <Link href="/services" className="body-text hover:text-3xl" onClick={() => setIsOpen(false)}>

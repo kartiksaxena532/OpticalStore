@@ -43,12 +43,12 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
-                href="#"
+                href="/buynow"
                 className="rounded-3xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 hover:text-xl duration-150 hover:rounded-full"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold text-gray-200 hover:text-xl duration-150">
+              <a href="/services" className="text-sm font-semibold text-gray-200 hover:text-xl duration-150">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
