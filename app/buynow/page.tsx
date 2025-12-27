@@ -2,11 +2,7 @@
 
 import React, { useState } from "react";
 import { db } from "@/lib/firebase";
-import {
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { generateOrderNumber } from "@/lib/generateOrderNumber";
 import { useFrames } from "@/app/context/FrameContext";
 
@@ -26,10 +22,16 @@ type Frame = {
   images?: string[];
 };
 
-/* ---------------- PAGE ---------------- */
+
+const COLORS = ["Black", "Grey"];
+
 export default function Page() {
   const { frames: products, loading } = useFrames();
+
   const [selectedProduct, setSelectedProduct] = useState<Frame | null>(null);
+  const [selectedSize, setSelectedSize] = useState("M");
+  const [selectedColor, setSelectedColor] = useState("Black");
+
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -42,7 +44,7 @@ export default function Page() {
     paymentMode: "COD",
   });
 
-  /* ---------------- FORM HANDLERS ---------------- */
+  /* ---------------- FORM HANDLER ---------------- */
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -66,6 +68,8 @@ export default function Page() {
         productCode: selectedProduct.code,
         productName: selectedProduct.name,
         price: selectedProduct.price,
+        size: selectedSize,
+        color: selectedColor,
         status: "NEW",
         createdAt: serverTimestamp(),
       });
@@ -75,6 +79,8 @@ export default function Page() {
       const msg = `Hi Deepak Opticals,%0A
 New Order: ${orderNo}%0A
 Frame: ${selectedProduct.name}%0A
+Size: ${selectedSize}%0A
+Color: ${selectedColor}%0A
 Lens: ${form.lensType}%0A
 Name: ${form.customerName}%0A
 Phone: ${form.phone}`;
@@ -108,7 +114,6 @@ Phone: ${form.phone}`;
     );
   }
 
-  /* ---------------- UI ---------------- */
   return (
     <main className="max-w-6xl my-20 mx-auto p-6 text-white">
       <h1 className="text-3xl md:text-4xl font-bold mb-8">
@@ -135,7 +140,7 @@ Phone: ${form.phone}`;
                       <img
                         src={img}
                         alt={p.name}
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover cursor-pointer"
                         onClick={() => setSelectedProduct(p)}
                       />
                     </SwiperSlide>
@@ -159,105 +164,146 @@ Phone: ${form.phone}`;
 
       {/* ---------- CHECKOUT ---------- */}
       {selectedProduct && (
-        <form
-          onSubmit={handleSubmit}
-          className="mt-8 bg-white/10 p-6 rounded-xl space-y-4"
+  <form
+    onSubmit={handleSubmit}
+    className="mt-8 bg-white/10 p-6 rounded-xl"
+  >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+      {/* ================= LEFT — IMAGE + SUMMARY ================= */}
+      <div className="space-y-4">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={12}
+          className="rounded-xl overflow-hidden"
         >
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation
-            pagination={{ clickable: true }}
-            spaceBetween={12}
-            className="rounded-xl overflow-hidden"
-          >
-            {(selectedProduct.images?.length
-              ? selectedProduct.images
-              : ["/placeholder-frame.png"]
-            ).map((img, idx) => (
-              <SwiperSlide key={idx}>
-                <img
-                  src={img}
-                  className="w-full h-72 object-cover"
-                  alt={selectedProduct.name}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {(selectedProduct.images?.length
+            ? selectedProduct.images
+            : ["/placeholder-frame.png"]
+          ).map((img, idx) => (
+            <SwiperSlide key={idx}>
+              <img
+                src={img}
+                className="w-full h-full object-cover"
+                alt={selectedProduct.name}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-          <div className="bg-white/20 p-4 rounded">
-            <p className="font-semibold">{selectedProduct.name}</p>
-            <p>₹{selectedProduct.price}</p>
-            <button
-              type="button"
-              onClick={() => setSelectedProduct(null)}
-              className="text-sm underline mt-2"
-            >
-              Change Frame
-            </button>
-          </div>
-
-          <select
-            name="lensType"
-            value={form.lensType}
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          >
-            <option>Single Vision</option>
-            <option>Anti Glare</option>
-            <option>Blue Cut</option> 
-            <option>Photochromatic</option>
-            <option>I’ll share prescription on WhatsApp</option>
-          </select>
-
-          <input
-            name="customerName"
-            placeholder="Full Name"
-            required
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-
-          <input
-            name="phone"
-            placeholder="Mobile Number"
-            required
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-
-          <textarea
-            name="address"
-            placeholder="Delivery Address"
-            required
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-
-          <input
-            name="city"
-            placeholder="City"
-            required
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-
-          <select
-            name="paymentMode"
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          >
-            <option value="COD">Cash on Delivery</option>
-            <option value="UPI">UPI on Delivery</option>
-          </select>
+        {/* PRODUCT SUMMARY */}
+        <div className="bg-white/20 p-4 rounded space-y-1">
+          <p className="font-semibold">{selectedProduct.name}</p>
+          <p>₹{selectedProduct.price}</p>
+          <p className="text-sm text-white/70">
+            Size: {selectedSize} • Color: {selectedColor}
+          </p>
 
           <button
-            disabled={submitting}
-            className="w-full bg-green-600 py-3 rounded font-semibold"
+            type="button"
+            onClick={() => setSelectedProduct(null)}
+            className="text-sm underline mt-2"
           >
-            {submitting ? "Placing Order..." : "Place Order"}
+            Change Frame
           </button>
-        </form>
-      )}
+        </div>
+      </div>
+
+      {/* ================= RIGHT — FORM ================= */}
+      <div className="space-y-4">
+
+        {/* COLOR */}
+        <div>
+          <p className="text-sm mb-2">Color</p>
+          <div className="flex gap-3">
+            {COLORS.map((c) => (
+              <button
+                type="button"
+                key={c}
+                onClick={() => setSelectedColor(c)}
+                className={`px-4 py-2 rounded-full border ${
+                  selectedColor === c
+                    ? "bg-white text-black"
+                    : "border-white/30"
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* SIZE */}
+       
+
+        {/* FORM FIELDS — UNCHANGED */}
+        <select
+          name="lensType"
+          value={form.lensType}
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        >
+          <option>Single Vision</option>
+          <option>Anti Glare</option>
+          <option>Blue Cut</option>
+          <option>Photochromatic</option>
+          <option>I’ll share prescription on WhatsApp</option>
+        </select>
+
+        <input
+          name="customerName"
+          placeholder="Full Name"
+          required
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        />
+
+        <input
+          name="phone"
+          placeholder="Mobile Number"
+          required
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        />
+
+        <textarea
+          name="address"
+          placeholder="Delivery Address"
+          required
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        />
+
+        <input
+          name="city"
+          placeholder="City"
+          required
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        />
+
+        <select
+          name="paymentMode"
+          onChange={handleChange}
+          className="w-full p-2 rounded text-black"
+        >
+          <option value="COD">Cash on Delivery</option>
+          <option value="UPI">UPI on Delivery</option>
+        </select>
+
+        <button
+          disabled={submitting}
+          className="w-full bg-green-600 py-3 rounded font-semibold"
+        >
+          {submitting ? "Placing Order..." : "Place Order"}
+        </button>
+      </div>
+    </div>
+  </form>
+)}
+      
     </main>
   );
 }
